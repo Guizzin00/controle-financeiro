@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  // ⚠️ MUITO IMPORTANTE PARA GITHUB PAGES
+  // ✅ BASE CORRETA PARA GITHUB PAGES
   base: mode === "production" ? "/controle-financeiro/" : "/",
 
   server: {
@@ -26,8 +26,10 @@ export default defineConfig(({ mode }) => ({
     },
   },
 
+  // ✅ BUILD AJUSTADO PARA /docs (PADRÃO GITHUB PAGES)
   build: {
-    outDir: "dist",
+    outDir: "docs",
+    emptyOutDir: true,
     sourcemap: false,
   },
 }));
