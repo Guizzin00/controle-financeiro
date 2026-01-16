@@ -25,11 +25,22 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@guilhermeribeiro" />
     <meta name="twitter:image" content="/og-image.png" />
-    <script type="module" crossorigin src="/controle-financeiro/assets/index-DXBaJ8rA.js"></script>
+
+    <script>
+  (function () {
+    const redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect !== location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
+
+    <script type="module" crossorigin src="/controle-financeiro/assets/index-BJ5fTo_W.js"></script>
     <link rel="stylesheet" crossorigin href="/controle-financeiro/assets/index-OWsG6TRU.css">
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
